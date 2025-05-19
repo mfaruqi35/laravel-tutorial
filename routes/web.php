@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ShowRoomsCotroller;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +19,4 @@ Route::middleware([
 });
 
 Route::get('/rooms', ShowRoomsCotroller::class);
+Route::resource('bookings', BookingController::class);
